@@ -1,0 +1,8 @@
+wwwroot\home.html
+wwwroot\home.js
+wwwroot\UserDetails.html
+wwwroot\UserDetails.js
+D:\לימודים שנה ב\api-לא עובד\Api\WebApi\WebApi\wwwroot\UserDetails.js
+D:\לימודים שנה ב\api-לא עובד\Api\WebApi\WebApi\wwwroot\UserDetails.html
+D:\לימודים שנה ב\api-לא עובד\Api\WebApi\WebApi\wwwroot\home.html
+D:\לימודים שנה ב\api-לא עובד\Api\WebApi\WebApi\wwwroot\home.js

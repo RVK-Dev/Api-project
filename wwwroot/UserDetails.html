@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="UserDetails.js" defer></script>
+    <style>
+        body {
+            font-size: 30px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            color: chocolate
+            
+        }
+        .changeDetails{
+            display:none;
+            background-color:powderblue;
+            padding:40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="title"></h1>
+    <p>your login are sucssed!!</p>
+    <button onclick="change()">change details</button>
+
+    <div class="changeDetails">
+
+        <label for="name">enter a name</label>
+        <br />
+        <input required type="text" id="name" />
+        <br />
+        <label for="lastName">enter a last name</label>
+        <br />
+        <input required type="text" id="lastName" />
+        <br />
+        <label for="email">enter a email</label>
+        <br />
+        <input required type="text" id="email" />
+        <br />
+        <label for="password">enter a password</label>
+        <br />
+        <input required type="password" id="password" />
+        <br />
+        <br />
+        <button onclick="put()">change</button>
+
+    </div>
+   
+
+</body>
+</html>

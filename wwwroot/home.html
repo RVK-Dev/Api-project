@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script defer src="home.js" ></script>
+    <style>
+        body{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            gap: 50px;
+           justify-content:center;
+           align-items:center;
+           background-color:aqua;
+           color:chocolate
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi wellcom to our project</h1>
+    <div class="sign">
+        <label for="name">enter a name</label>
+        <br />
+        <input required type="text" id="name" />
+        <br />
+        <label for="lastName">enter a last name</label>
+        <br />
+        <input required type="text" id="lastName" />
+        <br />
+        <label for="email">enter a email</label>
+        <br />
+        <input required type="text" id="email" />
+        <br />
+        <label for="password">enter a password</label>
+        <br />
+        <input required type="password" id="password" />
+        <br />
+        <br />
+        <button onclick="post()">sign</button>
+    </div>
+
+    <div class="get">
+
+        <label for="email1">enter your email</label>
+        <br />
+        <input required type="text" id="email1" />
+        <br />
+        <label for="password1">enter your password</label>
+        <br />
+        <input required type="password" id="password1" />
+        <br />
+        <br />
+        <button onclick="get()">login</button>
+        <br />
+        <a></a>
+
+    </div>
+
+
+</body>
+</html>
