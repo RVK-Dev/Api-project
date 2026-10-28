@@ -2,6 +2,7 @@
 
 namespace WebApi.Controllers
 {
+    //User.cs is not in the Controllers folder, so its namespace should be WebApi (like UserLogin)
     public class User
     {
         [Required]
