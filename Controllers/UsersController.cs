@@ -16,7 +16,8 @@ namespace WebApi.Controllers
 
             return new string[] { "Riki", "Zeava" };
         }
-        static string filePath = "file.txt";
+        //fix: The path never changes, so it can be readonly
+        static readonly string filePath = "file.txt";
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
         public ActionResult<User> Get(int id)
@@ -69,6 +70,7 @@ namespace WebApi.Controllers
 
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
+        //The assignment asks PUT to return Ok(): change void to IActionResult and return Ok() at the end
         public void Put(int id, [FromBody] User userToUpdate)
         {
 
@@ -81,12 +83,19 @@ namespace WebApi.Controllers
                 {
                     User user =
                     JsonSerializer.Deserialize<User>(currentUserInFile);
-                    if (user.Id == userToUpdate.Id)
+                    //fix: Look for the id from the route (api/Users/5), not the id in the body (it can be missing or 0)
+                    if (user.Id == id)
+                    {
                         textToReplace = currentUserInFile;
+                        //fix: Found- break
+                        break;
+                    }
                 }
             }
             if(textToReplace != string.Empty)
 {
+                //fix: Save the user with the id from the route
+                userToUpdate.Id = id;
                 string text = System.IO.File.ReadAllText(filePath);
                 text = text.Replace(textToReplace,
                 JsonSerializer.Serialize(userToUpdate));
